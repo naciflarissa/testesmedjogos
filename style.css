@@ -1,0 +1,123 @@
+:root {
+    --bg-main: #121616;
+    --bg-secondary: #1e2424;
+    --accent: #45b1c2;
+    --text-main: #edf0e9;
+    --border: #333;
+}
+
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+    font-family: "Courier New", monospace; 
+}
+
+body { 
+    background-color: var(--bg-main); 
+    color: var(--text-main); 
+    display: flex; 
+    justify-content: center; 
+    min-height: 100vh; 
+}
+
+.lobby-container { 
+    width: 100%; 
+    max-width: 500px; 
+    padding: 60px 20px; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+}
+
+header { 
+    text-align: center; 
+    margin-bottom: 50px; 
+}
+
+.logo { 
+    font-size: 2.8rem; 
+    font-weight: bold; /* Título em negrito */
+    color: var(--accent); 
+    letter-spacing: 2px; 
+    margin-bottom: 20px; /* Espaçamento igual */
+}
+
+.subtitle { 
+    opacity: 0.8; 
+    font-size: 1.1rem; 
+    margin-bottom: 20px; /* Espaçamento igual */
+}
+
+.current-date { 
+    font-size: 1rem; 
+    font-weight: bold; 
+    color: var(--accent); 
+}
+
+.game-selection { 
+    width: 100%; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 15px; 
+}
+
+.game-card { 
+    text-decoration: none;
+    color: inherit;
+    background: var(--bg-secondary); 
+    border: 1px solid var(--border); 
+    border-radius: 12px; 
+    padding: 22px; 
+    display: flex; 
+    align-items: center; 
+    transition: all 0.2s ease; 
+    position: relative;
+}
+
+.game-card:hover { 
+    border-color: var(--accent); 
+    transform: scale(1.02);
+    background: #252b2b;
+}
+
+.game-icon { 
+    font-size: 1.6rem; 
+    margin-right: 18px; 
+    width: 50px; 
+    height: 50px; 
+    background: #2a3030; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    border-radius: 10px; 
+}
+
+.game-info h2 { 
+    font-size: 1.25rem; 
+    margin-bottom: 4px; 
+    color: var(--accent);
+    font-weight: bold;
+}
+
+.game-info p { 
+    font-size: 0.8rem; 
+    opacity: 0.8; 
+    line-height: 1.2; 
+}
+
+.play-arrow { 
+    position: absolute; 
+    right: 20px; 
+    color: var(--accent); 
+    opacity: 0.4; 
+}
+
+.watermark { 
+    position: fixed; 
+    bottom: 20px; 
+    right: 20px; 
+    opacity: 0.2; 
+    font-size: 0.8rem; 
+    pointer-events: none;
+}

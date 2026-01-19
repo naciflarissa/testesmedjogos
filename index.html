@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEDjogos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="lobby-container">
+        <header>
+            <h1 class="logo">MEDjogos</h1>
+            <p class="subtitle">Escolha seu desafio!</p>
+            <div class="current-date" id="date-display">--/--/----</div>
+        </header>
+
+        <nav class="game-selection">
+            <a href="https://naciflarissa.github.io/testesmedordle/" class="game-card">
+                <div class="game-icon">🩺</div>
+                <div class="game-info">
+                    <h2>MEDordle</h2>
+                    <p>Descubra o diagnóstico do dia!</p>
+                </div>
+                <div class="play-arrow">➜</div>
+            </a>
+
+            <a href="https://naciflarissa.github.io/testesmednexo/" class="game-card">
+                <div class="game-icon">🧠</div>
+                <div class="game-info">
+                    <h2>MEDnexo</h2>
+                    <p>Descubra a conexão oculta!</p>
+                </div>
+                <div class="play-arrow">➜</div>
+            </a>
+
+            <a href="https://naciflarissa.github.io/testesmedcaca/" class="game-card">
+                <div class="game-icon">🔍</div>
+                <div class="game-info">
+                    <h2>MEDcaça</h2>
+                    <p>Encontre as palavras escondidas!</p>
+                </div>
+                <div class="play-arrow">➜</div>
+            </a>
+        </nav>
+
+        <div class="watermark">Larissa Nacif</div>
+    </div>
+
+    <script>
+        function atualizarData() {
+            const data = new Date();
+            const dia = String(data.getDate()).padStart(2, '0');
+            const mes = String(data.getMonth() + 1).padStart(2, '0');
+            const ano = data.getFullYear();
+            document.getElementById('date-display').textContent = `${dia}/${mes}/${ano}`;
+        }
+        atualizarData();
+    </script>
+</body>
+</html>
