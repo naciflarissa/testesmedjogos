@@ -4,16 +4,15 @@ function goToGame(gameType) {
     
     overlay.classList.remove('hidden');
     
-    // Aqui você injeta o código de cada jogo que já desenvolvemos
-    if (gameType === 'ordle') {
-        content.innerHTML = `<h1>MEDordle</h1><p style="text-align:center; margin-top:50px;">Carregando tabuleiro do dia...</p>`;
-        // Chamar função startMEDordle() aqui
+    if (gameType === 'caca') {
+        content.innerHTML = `<h1>MEDcaça</h1><p style="text-align:center; margin-top:50px;">Gerando grid de palavras...</p>`;
+        // Chamar função startMEDcaca() aqui
     } else if (gameType === 'nexo') {
         content.innerHTML = `<h1>MEDnexo</h1><p style="text-align:center; margin-top:50px;">Carregando conexões do dia...</p>`;
         // Chamar função startMEDnexo() aqui
-    } else if (gameType === 'caca') {
-        content.innerHTML = `<h1>MEDcaça</h1><p style="text-align:center; margin-top:50px;">Gerando grid de palavras...</p>`;
-        // Chamar função startMEDcaca() aqui
+    } else if (gameType === 'ordle') {
+        content.innerHTML = `<h1>MEDordle</h1><p style="text-align:center; margin-top:50px;">Carregando tabuleiro do dia...</p>`;
+        // Chamar função startMEDordle() aqui
     }
 }
 
